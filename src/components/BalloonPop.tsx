@@ -28,8 +28,8 @@ export default function BalloonPop() {
           id: counterRef.current++,
           x: Math.random() * 80 + 10, // 10% to 90%
           color: BALLOON_COLORS[Math.floor(Math.random() * BALLOON_COLORS.length)],
-          size: Math.random() * 40 + 60, // 60px to 100px
-          speed: Math.random() * 5 + 3, // 3s to 8s
+          size: Math.random() * 30 + 50, // 50px to 80px (smaller)
+          speed: Math.random() * 3 + 2, // 2s to 5s (faster)
         };
         setBalloons(prev => [...prev, newBalloon]);
       }

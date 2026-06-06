@@ -1,5 +1,5 @@
 
-export type GameMode = 'animals' | 'drawing' | 'game' | 'balloons' | 'music' | 'alphabet' | 'rewards' | 'math' | 'coloring' | 'funzone' | 'dino';
+export type GameMode = 'animals' | 'drawing' | 'game' | 'balloons' | 'music' | 'alphabet' | 'rewards' | 'math' | 'coloring' | 'funzone' | 'dino' | 'puzzle' | 'pet' | 'ocean' | 'space' | 'chef' | 'birds' | 'fruits' | 'drums' | 'weather' | 'clock' | 'traffic' | 'bugs' | 'shapes' | 'safari' | 'jump';
 
 export interface Sticker {
   id: string;

@@ -12,8 +12,8 @@ export default function MathMagic() {
   const [score, setScore] = useState(0);
 
   const generateProblem = () => {
-    const a = Math.floor(Math.random() * 5) + 1;
-    const b = Math.floor(Math.random() * 5) + 1;
+    const a = Math.floor(Math.random() * 10) + 5;
+    const b = Math.floor(Math.random() * 10) + 2;
     const op = Math.random() > 0.5 ? '+' : (a >= b ? '-' : '+');
     const ans = op === '+' ? a + b : a - b;
     

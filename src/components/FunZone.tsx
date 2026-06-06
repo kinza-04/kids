@@ -71,27 +71,27 @@ function EmojiCatcher({ onWin }: any) {
   const handle = () => {
     const next = s + 1;
     setS(next);
-    if(next === 5) { confetti(); onWin(); }
+    if(next === 10) { confetti(); onWin(); }
   };
-  return <div onClick={handle} className="h-[400px] bg-red-50 rounded-3xl flex items-center justify-center text-8xl cursor-pointer">🍎 <span className="absolute top-4 right-4 text-2xl font-bold">{s}/5</span></div>; 
+  return <div onClick={handle} className="h-[400px] bg-red-50 rounded-3xl flex items-center justify-center text-8xl cursor-pointer">🍎 <span className="absolute top-4 right-4 text-2xl font-bold">{s}/10</span></div>; 
 }
 function GhostHunter({ onWin }: any) { 
   const [s, setS] = useState(0);
   const handle = () => {
     const next = s + 1;
     setS(next);
-    if(next === 5) { confetti(); onWin(); }
+    if(next === 15) { confetti(); onWin(); }
   };
-  return <div onClick={handle} className="h-[400px] bg-purple-900 rounded-3xl flex items-center justify-center text-8xl cursor-pointer">👻 <span className="absolute top-4 right-4 text-2xl font-bold text-white">{s}/5</span></div>;
+  return <div onClick={handle} className="h-[400px] bg-purple-900 rounded-3xl flex items-center justify-center text-8xl cursor-pointer">👻 <span className="absolute top-4 right-4 text-2xl font-bold text-white">{s}/15</span></div>;
 }
 function QuickClick({ onWin }: any) { 
   const [s, setS] = useState(0);
   const handle = () => {
     const next = s + 1;
     setS(next);
-    if(next === 10) { confetti(); onWin(); }
+    if(next === 25) { confetti(); onWin(); }
   };
-  return <div onClick={handle} className="h-[400px] bg-yellow-50 rounded-3xl flex items-center justify-center text-8xl cursor-pointer">⭐ <span className="absolute top-4 right-4 text-2xl font-bold">{s}/10</span></div>;
+  return <div onClick={handle} className="h-[400px] bg-yellow-50 rounded-3xl flex items-center justify-center text-8xl cursor-pointer">⭐ <span className="absolute top-4 right-4 text-2xl font-bold">{s}/25</span></div>;
 }
 function SoundBoard({ onWin }: any) {
   const play = (t:string) => { window.speechSynthesis.speak(new SpeechSynthesisUtterance(t)); onWin(); };
