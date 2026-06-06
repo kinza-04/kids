@@ -4,7 +4,10 @@ import { Eraser, Pencil, Trash2, Download } from 'lucide-react';
 import { motion } from 'motion/react';
 import confetti from 'canvas-confetti';
 
+import { useRewards } from '../context/RewardContext';
+
 export default function DrawingBoard() {
+  const { addSticker } = useRewards();
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [isDrawing, setIsDrawing] = useState(false);
   const [color, setColor] = useState('#FF6B6B');
@@ -93,6 +96,8 @@ export default function DrawingBoard() {
       spread: 70,
       origin: { y: 0.6 }
     });
+    // Tiny chance of reward on clear to encourage exploration
+    if (Math.random() > 0.95) addSticker();
   };
 
   const download = () => {
@@ -102,6 +107,7 @@ export default function DrawingBoard() {
     link.download = 'my-masterpiece.png';
     link.href = canvas.toDataURL();
     link.click();
+    addSticker('5'); // Give Master Artist sticker
   };
 
   return (

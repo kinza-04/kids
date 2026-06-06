@@ -5,9 +5,12 @@ import confetti from 'canvas-confetti';
 import { RefreshCw, Trophy } from 'lucide-react';
 import type { Card } from '../types';
 
+import { useRewards } from '../context/RewardContext';
+
 const EMOJIS = ['🍦', '🍭', '🍕', '🍩', '🍔', '🍟', '🍓', '🍇'];
 
 export default function MemoryGame() {
+  const { addSticker } = useRewards();
   const [cards, setCards] = useState<Card[]>([]);
   const [flippedCards, setFlippedCards] = useState<number[]>([]);
   const [matches, setMatches] = useState(0);
@@ -61,6 +64,7 @@ export default function MemoryGame() {
               spread: 100,
               origin: { y: 0.6 }
             });
+            setTimeout(() => addSticker(), 1000);
           }
         }, 600);
       } else {
