@@ -1,0 +1,6 @@
+{
+  "name": "Kids Joy Park",
+  "description": "A delightful, interactive world for children with drawing, animal fun, and games.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
